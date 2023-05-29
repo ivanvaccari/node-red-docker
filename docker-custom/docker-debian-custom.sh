@@ -1,8 +1,9 @@
 #!/bin/bash
 export NODE_RED_VERSION=$(grep -oE "\"node-red\": \"(\w*.\w*.\w*.\w*.\w*.)" package.json | cut -d\" -f4)
-export NODE_VERSION="16"
+export NODE_VERSION="18"
 echo "#########################################################################"
 echo "node-red version: ${NODE_RED_VERSION}"
+echo "node version: ${NODE_VERSION}"
 echo "#########################################################################"
 
 docker build --rm --no-cache \
